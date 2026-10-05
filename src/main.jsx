@@ -37,6 +37,8 @@ function App() {
   return (
     <main className="page-shell">
       <div className="mesh" aria-hidden="true" />
+      <div className="aurora aurora-one" aria-hidden="true" />
+      <div className="aurora aurora-two" aria-hidden="true" />
       <section className="upgrade-stage">
         <nav className="brand-bar" aria-label="Site status">
           <a className="brand" href="/">
@@ -52,12 +54,11 @@ function App() {
 
         <div className="hero-grid">
           <div className="hero-copy">
-            <img className="hero-logo" src={locusLogo} alt="Locus Fire & Security" />
             <span className="eyebrow">
               <Sparkles size={16} />
               Fire, security and systems integration
             </span>
-            <h1>Our new website is being engineered.</h1>
+            <h1>We are building a sharper digital experience.</h1>
             <p>
               Locus Fire & Security is refreshing its digital experience. Our
               field teams and support channels remain active while the new site
@@ -83,16 +84,30 @@ function App() {
           </div>
 
           <div className="orbit-panel" aria-label="Website upgrade animation">
-            <div className="rings">
-              <span className="ring ring-one" />
-              <span className="ring ring-two" />
-              <span className="ring ring-three" />
-              <span className="core">
-                <Wrench size={44} />
-              </span>
-              <span className="node node-one" />
-              <span className="node node-two" />
-              <span className="node node-three" />
+            <div className="launch-card">
+              <div className="scan-frame">
+                <span className="scan-line" />
+                <span className="corner corner-one" />
+                <span className="corner corner-two" />
+                <span className="corner corner-three" />
+                <span className="corner corner-four" />
+                <div className="shield-orbit">
+                  <span className="orbit orbit-one" />
+                  <span className="orbit orbit-two" />
+                  <span className="orbit orbit-three" />
+                  <span className="core">
+                    <Wrench size={42} />
+                  </span>
+                  <span className="node node-one" />
+                  <span className="node node-two" />
+                  <span className="node node-three" />
+                </div>
+              </div>
+              <div className="mini-metrics">
+                <span>Secure</span>
+                <span>Fast</span>
+                <span>Responsive</span>
+              </div>
             </div>
             <div className="signal-board" aria-label="Website launch progress">
               <div className="signal-head">
