@@ -1,6 +1,16 @@
 import React from "react";
 import { createRoot } from "react-dom/client";
-import { Clock3, Mail, Phone, ShieldCheck, Sparkles, Wrench } from "lucide-react";
+import {
+  Camera,
+  Clock3,
+  Flame,
+  Mail,
+  Network,
+  Phone,
+  ShieldCheck,
+  Sparkles,
+  Wrench,
+} from "lucide-react";
 import locusLogo from "./assets/locus-logo-clean.png";
 import "./styles.css";
 
@@ -9,6 +19,12 @@ const updates = [
   "Cleaner product discovery",
   "Sharper support workflows",
   "Stronger security foundations",
+];
+
+const services = [
+  { label: "Fire & life safety", icon: Flame },
+  { label: "CCTV & surveillance", icon: Camera },
+  { label: "Networking & ELV", icon: Network },
 ];
 
 const contact = {
@@ -39,12 +55,13 @@ function App() {
             <img className="hero-logo" src={locusLogo} alt="Locus Fire & Security" />
             <span className="eyebrow">
               <Sparkles size={16} />
-              Something better is loading
+              Fire, security and systems integration
             </span>
-            <h1>We are upgrading our website.</h1>
+            <h1>Our new website is being engineered.</h1>
             <p>
-              Our team is polishing the experience behind the scenes. We will
-              be back soon with a faster, cleaner, and more capable website.
+              Locus Fire & Security is refreshing its digital experience. Our
+              field teams and support channels remain active while the new site
+              is prepared for launch.
             </p>
 
             <div className="actions">
@@ -77,7 +94,30 @@ function App() {
               <span className="node node-two" />
               <span className="node node-three" />
             </div>
+            <div className="signal-board" aria-label="Website launch progress">
+              <div className="signal-head">
+                <span>Launch readiness</span>
+                <strong>82%</strong>
+              </div>
+              <div className="progress-track">
+                <span />
+              </div>
+              <div className="signal-lines">
+                <span>Design refresh</span>
+                <span>Content migration</span>
+                <span>Final testing</span>
+              </div>
+            </div>
           </div>
+        </div>
+
+        <div className="service-grid" aria-label="Locus service areas">
+          {services.map(({ label, icon: Icon }) => (
+            <article key={label}>
+              <Icon size={22} />
+              <span>{label}</span>
+            </article>
+          ))}
         </div>
 
         <div className="info-strip" id="updates">
